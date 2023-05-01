@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(233, 233, 233);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: #fdfdfd;
+  /*background-image: url(/img/cont-01.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;*/
+  height: 900px;
+  width: 1440px;
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+}
+
+aside {
+  background-image: url(/img/side-01.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 400px;
+  height: 900px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+aside .footer {
+  border-top: #cc9d6f solid 0.1rem;
+  width: 400px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+aside .footer h1 {
+  font-family: sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+}
+aside h1 {
+  color: #fdfdfd;
+  font-family: sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+aside h1 i {
+  color: #cc9d6f;
+}
+aside .asp {
+  color: #fdfdfd;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0.8rem;
+  padding: 1.5rem;
+  font-size: 15px;
+  font-family: sans-serif;
+  line-height: 1.5;
+  width: 300px;
+}
+aside .asp i {
+  color: #cc9d6f;
+}
+aside img {
+  width: 20%;
+}
+
+main {
+  background-image: url(/img/side-01.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 940px;
+  height: 800px;
+  grid-column: 2/3;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: row;
+}
+main .cdiv {
+  height: 800px;
+  width: 150px;
+}
+
+.lph, .scin, .fl, .ma, .mm, .me, .fln {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 800px;
+  width: 150px;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fdfdfd;
+  text-align: center;
+  font-family: sans-serif;
+}
+.lph :hover, .scin :hover, .fl :hover, .ma :hover, .mm :hover, .me :hover, .fln :hover {
+  background-color: rgba(204, 157, 111, 0.1);
+  color: #fdfdfd;
+}
+.lph h1, .scin h1, .fl h1, .ma h1, .mm h1, .me h1, .fln h1 {
+  width: 120px;
+  text-align: center;
+}
+.lph h1 span, .scin h1 span, .fl h1 span, .ma h1 span, .mm h1 span, .me h1 span, .fln h1 span {
+  border-bottom: #cc9d6f 1px solid;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  font-weight: 900;
+  font-size: 15px;
+  color: #c9a923;
+  text-align: center;
+}
+.lph a, .scin a, .fl a, .ma a, .mm a, .me a, .fln a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  color: #fdfdfd;
+  font-family: sans-serif;
+  margin-top: 20px;
+  height: 2.5rem;
+  width: 140px;
+  background-color: rgba(204, 157, 111, 0.3);
+  border-bottom: #cc9d6f 1px solid;
+  padding: 5px;
+  text-align: center;
+}
+.lph a b, .scin a b, .fl a b, .ma a b, .mm a b, .me a b, .fln a b {
+  color: #c9a923;
+}
+
+.sci {
+  background-color: #000916;
+  height: 800px;
+  width: 150px;
+  margin-left: 5px;
+}
+
+@media (max-width: 428px) {
+  body {
+    background-color: #040404;
+  }
+  .container {
+    background-color: #040404;
+    width: 428px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  aside {
+    width: 428px;
+    height: 926px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-left: 0px;
+  }
+  aside .asp {
+    font-size: 1rem;
+    width: 350px;
+  }
+  aside .footer h1 {
+    font-size: 0.7rem;
+  }
+  main {
+    width: 428px;
+    height: 926px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+  }
+  main .cdiv {
+    width: 135px;
+  }
+  main .cdiv a {
+    width: 135px;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .lph {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .scin {
+    grid-column: 2/2;
+    grid-row: 2/3;
+  }
+  .fln {
+    grid-column: 3/3;
+    grid-row: 2/3;
+  }
+  .me {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .ma {
+    grid-column: 2/2;
+    grid-row: 3/4;
+  }
+  .fl {
+    grid-column: 3/3;
+    grid-row: 3/4;
+  }
+}/*# sourceMappingURL=prof.css.map */
